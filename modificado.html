@@ -1,0 +1,29 @@
+<head>
+    <title>Reloj </title>
+    <script language="JavaScript">
+    function mueveReloj(){
+        momentoActual = new Date()
+        hora = momentoActual.getHours()
+        minuto = momentoActual.getMinutes()
+        segundo = momentoActual.getSeconds()
+    
+        horaImprimible = hora + " : " + minuto + " : " + segundo
+    
+        document.form_reloj.reloj.value = horaImprimible
+    
+        setTimeout("mueveReloj()",1000)
+    }
+    </script>
+    </head>
+    <!--se agregò color de fondo al body y se le diò color a las letras-->>
+    <body onload="mueveReloj()" style="background-color:black; color: red">
+    
+    Vemos aquí el reloj funcionando...
+    <div>
+    <form clase name="form_reloj"> 
+    <input type="text" name="reloj" size= "6" style="background-color: rgb(98, 255, 0)">
+    </form><!--se colocò color de fondo al input-->
+    </div>
+    
+    </body>
+    </html>
